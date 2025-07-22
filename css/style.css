@@ -1,0 +1,389 @@
+/* General Body Styles */
+body {
+    background-color: #000;
+    color: #fff;
+    font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    padding-top: 100px; /* Add padding to prevent content from being hidden by the sticky header */
+}
+
+/* Header */
+header {
+    width: 90%;
+    margin: 10px auto 0;
+    padding: 1rem 2.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    background: rgba(34, 34, 34, 0.5);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+header .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+header nav a {
+    margin: 0 1.5rem;
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s ease;
+}
+
+header nav a:hover {
+    color: #1DE9B6;
+}
+
+header .donate-btn {
+    background-color: #1DE9B6;
+    color: #000;
+    font-weight: bold;
+    padding: 0.75rem 1.5rem;
+    border-radius: 50px;
+    text-decoration: none;
+    align-items: right;
+    transition: background-color 0.3s ease;
+}
+
+header .donate-btn:hover {
+    background-color: #fff;
+}
+
+/* Hero Section */
+#home {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#home h1 {
+    font-size: 4rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+#home .subtitle {
+    font-size: 1.5rem;
+    color: #1DE9B6;
+    margin-bottom: 1rem;
+}
+
+#home .tagline {
+    font-size: 1.1rem;
+    color: #aaa;
+    max-width: 500px;
+    margin: 0 auto 2rem;
+}
+
+/* Buttons */
+.btn {
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    display: inline-block;
+    margin: 0 0.5rem;
+}
+
+.btn-primary {
+    background-color: #1DE9B6;
+    color: #000;
+}
+
+.btn-primary:hover {
+    background-color: #fff;
+    transform: translateY(-3px);
+}
+
+.btn-secondary {
+    border: 2px solid #1DE9B6;
+    color: #1DE9B6;
+}
+
+.btn-secondary:hover {
+    background-color: #1DE9B6;
+    color: #000;
+    transform: translateY(-3px);
+}
+
+/* About Section */
+#about {
+    padding: 6rem 0;
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+}
+
+#about img {
+    width: 350px;
+    height: 350px;
+    object-fit: cover;
+}
+
+#about .content h2 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+}
+
+#about .content p {
+    color: #aaa;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+}
+
+/* Skills Section */
+#skills {
+    padding: 6rem 0;
+    overflow: hidden;
+}
+
+#skills h2 {
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.skills-loop {
+    display: flex;
+    white-space: nowrap;
+    animation: loop 20s linear infinite;
+}
+
+.skill-card {
+    background-color: #111;
+    padding: 2rem 3rem;
+    border-radius: 20px;
+    margin: 0 1rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+@keyframes loop {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
+}
+
+/* Projects Section */
+#projects {
+    padding: 6rem 0;
+}
+
+#projects h2 {
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+#projects-container {
+    display: flex;
+    gap: 2rem;
+    padding: 2rem;
+    overflow-x: auto;
+    /* Hide scrollbar */
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;  /* IE and Edge */
+}
+
+#projects-container::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+}
+
+.project-card {
+    height: 100px;
+    width: 60px;
+    background-color: #111;
+    border-radius: 40px;
+    padding: 1.5rem;
+    min-width: 320px;
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+}
+
+.project-card img {
+    border-radius: 25px;
+    margin-bottom: 1.5rem;
+    width: auto;
+    height: auto;
+    object-fit: cover;
+}
+
+.project-card h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: left;
+
+}
+
+.project-card p {
+    color: #aaa;
+    margin: 1rem 0;
+}
+
+.project-card a {
+    color: #1DE9B6;
+    font-weight: bold;
+    text-decoration: none;
+    border: 2px solid #1DE9B6;
+}
+.project-card a:hover {
+    background-color: #1DE9B6;
+    color: #000;
+    transform: translateY(-3px);
+}
+
+/* Contact Section */
+#contact {
+    padding: 6rem 0;
+}
+
+#contact h2 {
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+#contact form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+#contact input, #contact textarea {
+    background-color: #111;
+    border: 2px solid #333;
+    padding: 1rem;
+    border-radius: 20px;
+    color: #fff;
+    font-size: 1rem;
+}
+
+#contact input:focus, #contact textarea:focus {
+    outline: none;
+    border-color: #1DE9B6;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 4rem 0 2rem;
+    color: #aaa;
+}
+
+footer .socials {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+footer .socials a {
+    color: #aaa;
+    font-size: 1.5rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+footer .socials a:hover {
+    color: #1DE9B6;
+    transform: translateY(-3px);
+}
+
+/* Donate and Upload Page */
+.center-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    text-align: center;
+}
+
+.center-page h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.center-page p {
+    color: #aaa;
+    margin-bottom: 2rem;
+}
+
+.upload-form-container {
+    background-color: #111;
+    padding: 3rem;
+    border-radius: 40px;
+    width: 100%;
+    max-width: 500px;
+}
+
+.upload-form-container .form-group {
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+.upload-form-container label {
+    display: block;
+    color: #aaa;
+    margin-bottom: 0.5rem;
+}
+
+.upload-form-container input, .upload-form-container textarea {
+    width: 100%;
+    background-color: #000;
+    border: 2px solid #333;
+    padding: 1rem;
+    border-radius: 20px;
+    color: #fff;
+    font-size: 1rem;
+}
+
+.upload-form-container input[type="file"] {
+    padding: 0;
+}
+
+.upload-form-container input[type="file"]::-webkit-file-upload-button {
+    background: #1DE9B6;
+    border: none;
+    padding: 1rem 1.5rem;
+    border-radius: 20px;
+    color: #000;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    header nav {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    #home h1 { font-size: 3rem; }
+    #about { flex-direction: column; text-align: center; }
+    #about img { width: 250px; height: 250px; }
+}
